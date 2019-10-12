@@ -21,7 +21,8 @@ None
 Example Usage
 ----------------
 
-As task:
+In a task:
+
     - pause:
         prompt: |
           I {{  yamlcolors.Red }}love{{  yamlcolors.NC }} you!
@@ -29,6 +30,8 @@ As task:
 
 
 In a sh-script-template:
+
+    #!/bin/sh
     echo -e "I {{ bashcolors.Red }}love{{ bashcolors.NC }} you!"
 
 License
