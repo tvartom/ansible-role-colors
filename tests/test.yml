@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - include_role:
+        name: ansible-role-colors
+    - pause:
+        prompt: |
+          The following colors are available in yamlcolors:
+          {% set output = {} -%}
+          {%- for key,value in yamlcolors.items() if not key.startswith('On') %}
+          {{ value }}{{ key }} 
+          {%-   for bkey,bvalue in yamlcolors.items() if bkey.startswith('On') -%}
+          {{ value }}{{      bvalue }}{{ bkey }}{{ yamlcolors.NC }}
+          {%-    endfor %}
+
+          {% endfor -%}
+        seconds: 0
+
+
