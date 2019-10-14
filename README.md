@@ -48,14 +48,18 @@ Example Playbook
 Example Usage
 ----------------
 
-As task:
+In a task:
+
     - pause:
         prompt: |
           I {{ yamlcolors.Red }}love{{  yamlcolors.NC }} you!
         seconds: 0
 
 
+
 In a bash-script-template:
+
+    #!/bin/sh
     echo -e "I {{ bashcolors.Red }}love{{ bashcolors.NC }} you!"
 
 License
