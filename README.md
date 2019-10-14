@@ -6,7 +6,7 @@ A role used to register variables with colorcodes for Bash.
 Install role
 ------------
 
-Create `requirements.yml` in your ansible playbook-folder.
+Create `requirements.yml` in your ansible playbook-folder:
 
     ---
     # Documentation:
